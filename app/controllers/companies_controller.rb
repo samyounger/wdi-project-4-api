@@ -8,9 +8,7 @@ class CompaniesController < ApplicationController
   def getdetails
     @companyEpic = params[:q]
     response = HTTParty.get('http://finance.google.com/finance/info?client=ig&q=' + @companyEpic)
-    puts 'http://finance.google.com/finance/info?client=ig&q=' + @companyEpic
     response.sub! '// ', ''
     render json: response.parsed_response
-    puts response
   end
 end
