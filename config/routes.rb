@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     resources :companies
     post 'register', to: 'authentications#register'
     post 'login', to: 'authentications#login'
+    post 'company', to: 'companies#searchname'
+    post 'getdetails', to: 'companies#getdetails'
   end
 end
