@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161023122248) do
+ActiveRecord::Schema.define(version: 20161025111551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "trades", force: :cascade do |t|
+    t.string   "epic"
+    t.string   "number_of_shares"
+    t.string   "price"
+    t.string   "value"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "user_id"
+    t.integer  "trade_type"
+    t.index ["trade_type"], name: "index_trades_on_trade_type", using: :btree
+    t.index ["user_id"], name: "index_trades_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -25,4 +38,5 @@ ActiveRecord::Schema.define(version: 20161023122248) do
     t.string   "password_digest"
   end
 
+  add_foreign_key "trades", "users"
 end
