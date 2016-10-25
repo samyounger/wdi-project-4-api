@@ -11291,3 +11291,487 @@ Processing by CompaniesController#getdetails as HTML
 Completed 200 OK in 44ms (Views: 0.6ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/api/register" for ::1 at 2016-10-24 21:13:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"user"=>{"username"=>"sam", "firstName"=>"sam", "lastName"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}, "authentication"=>{"user"=>{"username"=>"sam", "firstName"=>"sam", "lastName"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/samyounger/development/wdi-project-4/wdi-project-4-api/app/controllers/authentications_controller.rb:25)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 422 Unprocessable Entity in 31ms (Views: 2.2ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/api/register" for ::1 at 2016-10-24 21:13:56 +0100
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"user"=>{"username"=>"sam", "firstName"=>"sam", "lastName"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}, "authentication"=>{"user"=>{"username"=>"sam", "firstName"=>"sam", "lastName"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/samyounger/development/wdi-project-4/wdi-project-4-api/app/controllers/authentications_controller.rb:25)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/register" for ::1 at 2016-10-24 21:14:09 +0100
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"user"=>{"username"=>"sam", "firstName"=>"sam", "lastName"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}, "authentication"=>{"user"=>{"username"=>"sam", "firstName"=>"sam", "lastName"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]"}}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/samyounger/development/wdi-project-4/wdi-project-4-api/app/controllers/authentications_controller.rb:25)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-24 21:16:04 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 401 Unauthorized in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:14 +0100
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:14 +0100
+Processing by CompaniesController#searchname as HTML
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"m", "company"=>{"input"=>"m"}}
+  Parameters: {"input"=>"mi", "company"=>{"input"=>"mi"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:14 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"mic", "company"=>{"input"=>"mic"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:14 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"micr", "company"=>{"input"=>"micr"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:15 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"micro", "company"=>{"input"=>"micro"}}
+Completed 200 OK in 879ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:15 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"microso", "company"=>{"input"=>"microso"}}
+Completed 200 OK in 1049ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:15 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"microsof", "company"=>{"input"=>"microsof"}}
+Completed 200 OK in 806ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 297ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:15 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"microsoft", "company"=>{"input"=>"microsoft"}}
+Completed 200 OK in 1285ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 291ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:15 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"micros", "company"=>{"input"=>"micros"}}
+Completed 200 OK in 947ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 293ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 292ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:17 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"Microsoft Corp", "company"=>{"input"=>"Microsoft Corp"}}
+Completed 200 OK in 305ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-25 09:03:22 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"MSFT", "company"=>{"q"=>"MSFT"}}
+Completed 200 OK in 86ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:33 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"i", "company"=>{"input"=>"i"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:33 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"in", "company"=>{"input"=>"in"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:33 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"int", "company"=>{"input"=>"int"}}
+Completed 200 OK in 254ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:33 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"inte", "company"=>{"input"=>"inte"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:33 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"intel", "company"=>{"input"=>"intel"}}
+Completed 200 OK in 257ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 829ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 264ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1315ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:36 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"inte", "company"=>{"input"=>"inte"}}
+Completed 200 OK in 250ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:37 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"intel", "company"=>{"input"=>"intel"}}
+Completed 200 OK in 278ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:03:41 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"Intelsat SA", "company"=>{"input"=>"Intelsat SA"}}
+Completed 200 OK in 250ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-25 09:03:43 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"I", "company"=>{"q"=>"I"}}
+Completed 200 OK in 53ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:01 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"m", "company"=>{"input"=>"m"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:02 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"mi", "company"=>{"input"=>"mi"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:02 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"mic", "company"=>{"input"=>"mic"}}
+Completed 200 OK in 444ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 357ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:02 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"micr", "company"=>{"input"=>"micr"}}
+Completed 200 OK in 285ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:02 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"micro", "company"=>{"input"=>"micro"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:02 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"micros", "company"=>{"input"=>"micros"}}
+Completed 200 OK in 291ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 289ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:02 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"microso", "company"=>{"input"=>"microso"}}
+Completed 200 OK in 297ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:03 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"microsof", "company"=>{"input"=>"microsof"}}
+Completed 200 OK in 280ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:03 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"microsoft", "company"=>{"input"=>"microsoft"}}
+Completed 200 OK in 286ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 279ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:04 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"Microsoft Corp", "company"=>{"input"=>"Microsoft Corp"}}
+Completed 200 OK in 279ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-25 09:04:08 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"MSFT", "company"=>{"q"=>"MSFT"}}
+Completed 200 OK in 44ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:16 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"a", "company"=>{"input"=>"a"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:17 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"ap", "company"=>{"input"=>"ap"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:17 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"app", "company"=>{"input"=>"app"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:17 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"appl", "company"=>{"input"=>"appl"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:18 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"apple", "company"=>{"input"=>"apple"}}
+Completed 200 OK in 1553ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 759ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 288ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1086ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 934ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:04:19 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"Apple Inc", "company"=>{"input"=>"Apple Inc"}}
+Completed 200 OK in 317ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-25 09:04:24 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"AAPL", "company"=>{"q"=>"AAPL"}}
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:43:07 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"j", "company"=>{"input"=>"j"}}
+Started POST "/api/company" for ::1 at 2016-10-25 09:43:07 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"jp", "company"=>{"input"=>"jp"}}
+Completed 200 OK in 1313ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1542ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-25 09:43:12 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"JPMorgan Chase & Co", "company"=>{"input"=>"JPMorgan Chase & Co"}}
+Completed 200 OK in 632ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-25 09:43:19 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"JPM", "company"=>{"q"=>"JPM"}}
+Completed 200 OK in 86ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 09:46:27 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.38ms)
+Completed 401 Unauthorized in 3ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 09:46:28 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 09:46:49 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"matt@matt.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"matt@matt.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "matt@matt.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/register" for ::1 at 2016-10-25 09:53:59 +0100
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "authentication"=>{"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/samyounger/development/wdi-project-4/wdi-project-4-api/app/controllers/authentications_controller.rb:25)
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  [1m[35mSQL (4.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "sam"], ["first_name", "sam"], ["last_name", "younger"], ["created_at", 2016-10-25 08:54:00 UTC], ["updated_at", 2016-10-25 08:54:00 UTC], ["email", "sam@sam.com"], ["password_digest", "$2a$10$SqOoeq9aH6ciAjCobQbrmeEhWB19eGqdg1/oSEaX3J58DzPT0UZsC"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.87ms)
+Completed 200 OK in 77ms (Views: 4.2ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/api/register" for ::1 at 2016-10-25 09:54:05 +0100
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "authentication"=>{"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/samyounger/development/wdi-project-4/wdi-project-4-api/app/controllers/authentications_controller.rb:25)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 66ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/register" for ::1 at 2016-10-25 09:55:25 +0100
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "authentication"=>{"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/samyounger/development/wdi-project-4/wdi-project-4-api/app/controllers/authentications_controller.rb:25)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 422 Unprocessable Entity in 61ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/register" for ::1 at 2016-10-25 09:57:22 +0100
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "authentication"=>{"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/samyounger/development/wdi-project-4/wdi-project-4-api/app/controllers/authentications_controller.rb:25)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 64ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (119.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "back-end_development"[0m
+  [1m[35m (118.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "back-end_test"[0m
+  [1m[35m (294.0ms)[0m  [1m[35mCREATE DATABASE "back-end_development" ENCODING = 'unicode'[0m
+  [1m[35m (231.4ms)[0m  [1m[35mCREATE DATABASE "back-end_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5449466309483250600);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20161023122105)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161023122105"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmailAndPasswordDigestToUser (20161023122248)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161023122248"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-25 08:59:02 UTC], ["updated_at", 2016-10-25 08:59:02 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5449466309483250600)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started POST "/api/register" for ::1 at 2016-10-25 09:59:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#register as HTML
+  Parameters: {"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "authentication"=>{"username"=>"sam", "first_name"=>"sam", "last_name"=>"younger", "email"=>"sam@sam.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+DEPRECATION WARNING: Method to_hash is deprecated and will be removed in Rails 5.1, as `ActionController::Parameters` no longer inherits from hash. Using this deprecated behavior exposes potential security problems. If you continue to use this method you may be creating a security vulnerability in your app that can be exploited. Instead, consider using one of these documented methods which are not deprecated: http://api.rubyonrails.org/v5.0.0.1/classes/ActionController/Parameters.html (called from merge! at /Users/samyounger/development/wdi-project-4/wdi-project-4-api/app/controllers/authentications_controller.rb:25)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "sam"], ["first_name", "sam"], ["last_name", "younger"], ["created_at", 2016-10-25 08:59:29 UTC], ["updated_at", 2016-10-25 08:59:29 UTC], ["email", "sam@sam.com"], ["password_digest", "$2a$10$xruSWxR/rh7NuQDU939i9.5H02zBFIR/PajbhcJ55tDsR7g5zqi/C"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.12ms)
+Completed 200 OK in 103ms (Views: 6.7ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 10:04:53 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 62ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 10:11:30 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 58ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 10:12:15 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 62ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 10:14:27 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 59ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 10:15:20 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 61ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 10:18:08 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 59ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 10:19:37 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 61ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-25 10:22:22 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 61ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+
+
