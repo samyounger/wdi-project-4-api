@@ -35248,3 +35248,673 @@ Processing by CompaniesController#getdetails as HTML
 Completed 200 OK in 62ms (Views: 0.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/api/users" for ::1 at 2016-10-26 18:35:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-26 18:35:19 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.3ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (34.26ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 7.6ms)
+
+
+  
+NoMethodError (undefined method `value' for #<Trade:0x007f8bb8b16e08>
+Did you mean?  validate):
+  
+app/controllers/authentications_controller.rb:18:in `login'
+Started POST "/api/login" for 127.0.0.1 at 2016-10-26 18:37:42 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.3ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.95ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `value' for #<Trade:0x007f8bb920aae8>
+Did you mean?  validate):
+  
+app/controllers/authentications_controller.rb:18:in `login'
+Started POST "/api/login" for 127.0.0.1 at 2016-10-26 18:40:07 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.2ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (17.98ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 6.8ms)
+
+
+  
+NoMethodError (undefined method `value' for #<Trade:0x007f8bbd072df8>
+Did you mean?  validate):
+  
+app/controllers/authentications_controller.rb:18:in `login'
+Started POST "/api/login" for 127.0.0.1 at 2016-10-26 18:40:09 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.3ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.36ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `value' for #<Trade:0x007f8bbb2f0d98>
+Did you mean?  validate):
+  
+app/controllers/authentications_controller.rb:18:in `login'
+Started POST "/api/login" for 127.0.0.1 at 2016-10-26 18:40:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.4ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (37.55ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 9.2ms)
+
+
+  
+NoMethodError (undefined method `value' for #<Trade:0x007f86c4436550>
+Did you mean?  validate):
+  
+app/controllers/authentications_controller.rb:18:in `login'
+Started POST "/api/login" for 127.0.0.1 at 2016-10-26 18:40:28 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.3ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.23ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `value' for #<Trade:0x007f86c5db0670>
+Did you mean?  validate):
+  
+app/controllers/authentications_controller.rb:18:in `login'
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (120.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "back-end_development"[0m
+  [1m[35m (118.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "back-end_test"[0m
+  [1m[35m (233.6ms)[0m  [1m[35mCREATE DATABASE "back-end_development" ENCODING = 'unicode'[0m
+  [1m[35m (232.8ms)[0m  [1m[35mCREATE DATABASE "back-end_test" ENCODING = 'unicode'[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5449466309483250600);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20161023122105)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161023122105"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmailAndPasswordDigestToUser (20161023122248)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161023122248"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTrades (20161025094016)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "trades" ("id" serial primary key, "epic" character varying, "number_of_shares" integer, "price" integer, "value" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025094016"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserToTrade (20161025095358)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "trades" ADD "user_id" integer[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_trades_on_user_id" ON "trades"  ("user_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "trades" ADD CONSTRAINT "fk_rails_12b0ea7696"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025095358"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTradeTypeToTrade (20161025111551)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "trades" ADD "trade_type" integer[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_trades_on_trade_type" ON "trades"  ("trade_type")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025111551"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddExchangeToTrades (20161025174919)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "trades" ADD "exchange" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025174919"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeTradeValueName (20161026172231)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "trades" RENAME COLUMN "value" TO "book_value"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161026172231"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-26 17:41:02 UTC], ["updated_at", 2016-10-26 17:41:02 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5449466309483250600)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'trades'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "sam"], ["first_name", "Sam"], ["last_name", "Younger"], ["created_at", 2016-10-26 17:41:02 UTC], ["updated_at", 2016-10-26 17:41:02 UTC], ["email", "sam@sam.com"], ["password_digest", "$2a$10$9FdZ9hi4pjfCkedMSPVZ4.WClQBNtFV9R.AT5euKHfdDDUMZ2RgLu"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "cora"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "cora"], ["first_name", "Cora"], ["last_name", "Barrett"], ["created_at", 2016-10-26 17:41:02 UTC], ["updated_at", 2016-10-26 17:41:02 UTC], ["email", "cora@cora.com"], ["password_digest", "$2a$10$q3zBQ8d9GauvgL5RFmyfDOn/p1SQH3fWbDTHxFFrzFztNBBg0gcX."]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "alex"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "alex"], ["first_name", "Alex"], ["last_name", "Chin"], ["created_at", 2016-10-26 17:41:02 UTC], ["updated_at", 2016-10-26 17:41:02 UTC], ["email", "alex@alex.com"], ["password_digest", "$2a$10$Onzr0u6oX7zLDW40TJUYA.VIK6TPvHtr6J3gN6osJH88huysLxI/O"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kenny"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "kenny"], ["first_name", "Kenny"], ["last_name", "McCormick"], ["created_at", 2016-10-26 17:41:02 UTC], ["updated_at", 2016-10-26 17:41:02 UTC], ["email", "kenny@kenny.com"], ["password_digest", "$2a$10$.ZTGA7UFC0E54sdcq21F8uqPtQgKlJ4EgoOjuP6YOliLJGV8JLAW6"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (121.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "back-end_development"[0m
+  [1m[35m (121.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "back-end_test"[0m
+  [1m[35m (234.4ms)[0m  [1m[35mCREATE DATABASE "back-end_development" ENCODING = 'unicode'[0m
+  [1m[35m (235.4ms)[0m  [1m[35mCREATE DATABASE "back-end_test" ENCODING = 'unicode'[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5449466309483250600);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20161023122105)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161023122105"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmailAndPasswordDigestToUser (20161023122248)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161023122248"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTrades (20161025094016)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "trades" ("id" serial primary key, "epic" character varying, "number_of_shares" integer, "price" integer, "value" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025094016"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserToTrade (20161025095358)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "trades" ADD "user_id" integer[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_trades_on_user_id" ON "trades"  ("user_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "trades" ADD CONSTRAINT "fk_rails_12b0ea7696"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025095358"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTradeTypeToTrade (20161025111551)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "trades" ADD "trade_type" integer[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_trades_on_trade_type" ON "trades"  ("trade_type")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025111551"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddExchangeToTrades (20161025174919)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "trades" ADD "exchange" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025174919"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeTradeValueName (20161026172231)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "trades" RENAME COLUMN "value" TO "book_value"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161026172231"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-26 17:42:11 UTC], ["updated_at", 2016-10-26 17:42:11 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5449466309483250600)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'trades'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "sam"], ["first_name", "Sam"], ["last_name", "Younger"], ["created_at", 2016-10-26 17:42:11 UTC], ["updated_at", 2016-10-26 17:42:11 UTC], ["email", "sam@sam.com"], ["password_digest", "$2a$10$WKs4uvY9f9eQDpcdQR9NGOP5san9NXEL0FRCmkMlLuq/I72GYhUsK"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "cora"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "cora"], ["first_name", "Cora"], ["last_name", "Barrett"], ["created_at", 2016-10-26 17:42:11 UTC], ["updated_at", 2016-10-26 17:42:11 UTC], ["email", "cora@cora.com"], ["password_digest", "$2a$10$Id/XIoDQbD2ocwJUddSS3Od5scTqaKLgDlQ7LgEwg9DL/1cAVO.GO"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "alex"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "alex"], ["first_name", "Alex"], ["last_name", "Chin"], ["created_at", 2016-10-26 17:42:12 UTC], ["updated_at", 2016-10-26 17:42:12 UTC], ["email", "alex@alex.com"], ["password_digest", "$2a$10$OOg/BIBR3v7QnQPIOwfLTOZgfQG8o7hS6EUWebO31AgQVXTvh9yIy"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kenny"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "kenny"], ["first_name", "Kenny"], ["last_name", "McCormick"], ["created_at", 2016-10-26 17:42:12 UTC], ["updated_at", 2016-10-26 17:42:12 UTC], ["email", "kenny@kenny.com"], ["password_digest", "$2a$10$x67tJCAVOPOGCeA2CrOVqO8IQg/2vU54YepMoB9jMqdjq4Bc65eMi"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (120.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "back-end_development"[0m
+  [1m[35m (120.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "back-end_test"[0m
+  [1m[35m (233.1ms)[0m  [1m[35mCREATE DATABASE "back-end_development" ENCODING = 'unicode'[0m
+  [1m[35m (234.1ms)[0m  [1m[35mCREATE DATABASE "back-end_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5449466309483250600);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20161023122105)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "first_name" character varying, "last_name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161023122105"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEmailAndPasswordDigestToUser (20161023122248)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161023122248"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTrades (20161025094016)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "trades" ("id" serial primary key, "epic" character varying, "number_of_shares" integer, "price" integer, "value" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025094016"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserToTrade (20161025095358)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "trades" ADD "user_id" integer[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX  "index_trades_on_user_id" ON "trades"  ("user_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "trades" ADD CONSTRAINT "fk_rails_12b0ea7696"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025095358"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTradeTypeToTrade (20161025111551)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "trades" ADD "trade_type" integer[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_trades_on_trade_type" ON "trades"  ("trade_type")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025111551"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddExchangeToTrades (20161025174919)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "trades" ADD "exchange" character varying[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161025174919"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeTradeValueName (20161026172231)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "trades" RENAME COLUMN "value" TO "book_value"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161026172231"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5449466309483250600)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'trades'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "sam"], ["first_name", "Sam"], ["last_name", "Younger"], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["email", "sam@sam.com"], ["password_digest", "$2a$10$kgVrr6C5akaGxr91T.B8k.1ZJxWSkABW8gDnC1kmjZVLfZdrsifEa"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "cora"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "cora"], ["first_name", "Cora"], ["last_name", "Barrett"], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["email", "cora@cora.com"], ["password_digest", "$2a$10$VVnpydDoH1IdTphtwPQseePAmOckKkd9JS.g//d29fIlgun2SzXpS"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "alex"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "alex"], ["first_name", "Alex"], ["last_name", "Chin"], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["email", "alex@alex.com"], ["password_digest", "$2a$10$1wybqXmobmJYtCGmFojCX.9vcOhmB/UYk3ZuzXZ9gpgJSMdQ7YHwW"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kenny"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["username", "kenny"], ["first_name", "Kenny"], ["last_name", "McCormick"], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["email", "kenny@kenny.com"], ["password_digest", "$2a$10$JDi7kGph363F6CYyysplguMZq1gnV0mjhTqYbsQElzr.LkUlv8l26"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "trades" ("epic", "number_of_shares", "price", "book_value", "created_at", "updated_at", "user_id", "trade_type", "exchange") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["epic", "JPM"], ["number_of_shares", 100], ["price", 56], ["book_value", 5600], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["user_id", 1], ["trade_type", 1], ["exchange", "NYSE"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "trades" ("epic", "number_of_shares", "price", "book_value", "created_at", "updated_at", "user_id", "trade_type", "exchange") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["epic", "MSFC"], ["number_of_shares", 50], ["price", 84], ["book_value", 4200], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["user_id", 2], ["trade_type", 1], ["exchange", "NASDAQ"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "trades" ("epic", "number_of_shares", "price", "book_value", "created_at", "updated_at", "user_id", "trade_type", "exchange") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["epic", "INTC"], ["number_of_shares", 2000], ["price", 34], ["book_value", 68000], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["user_id", 3], ["trade_type", 0], ["exchange", "NASDAQ"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "trades" ("epic", "number_of_shares", "price", "book_value", "created_at", "updated_at", "user_id", "trade_type", "exchange") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["epic", "C"], ["number_of_shares", 150], ["price", 89], ["book_value", 13350], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["user_id", 3], ["trade_type", 1], ["exchange", "NYSE"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "trades" ("epic", "number_of_shares", "price", "book_value", "created_at", "updated_at", "user_id", "trade_type", "exchange") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["epic", "GOOG"], ["number_of_shares", 150000], ["price", 87], ["book_value", 13050000], ["created_at", 2016-10-26 17:42:52 UTC], ["updated_at", 2016-10-26 17:42:52 UTC], ["user_id", 4], ["trade_type", 0], ["exchange", "NASDAQ"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/login" for 127.0.0.1 at 2016-10-26 18:43:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.4ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (36.54ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 8.2ms)
+
+
+  
+NoMethodError (undefined method `value' for #<Trade:0x007fe09e31b0b0>
+Did you mean?  validate):
+  
+app/controllers/authentications_controller.rb:18:in `login'
+Started POST "/api/login" for 127.0.0.1 at 2016-10-26 18:44:56 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.2ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (14.08ms)
+Completed 200 OK in 89ms (Views: 12.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/users" for ::1 at 2016-10-26 18:45:15 +0100
+Processing by UsersController#index as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/login" for ::1 at 2016-10-26 18:45:26 +0100
+Processing by AuthenticationsController#login as HTML
+  Parameters: {"email"=>"sam@sam.com", "password"=>"[FILTERED]", "authentication"=>{"email"=>"sam@sam.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@sam.com"], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.3ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.01ms)
+Completed 200 OK in 63ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/users/1?exp=1480095926" for ::1 at 2016-10-26 18:45:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"exp"=>"1480095926", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.4ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.23ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users/1" for ::1 at 2016-10-26 18:45:31 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.3ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.65ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-26 18:45:31 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"NYSE:JPM", "company"=>{"q"=>"NYSE:JPM"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:36 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"a", "company"=>{"input"=>"a"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:37 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"ap", "company"=>{"input"=>"ap"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:37 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"app", "company"=>{"input"=>"app"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:37 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"appl", "company"=>{"input"=>"appl"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 471ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:37 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"apple", "company"=>{"input"=>"apple"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 382ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 635ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 362ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 2776ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-26 18:45:44 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"NASDAQ:AAPL", "company"=>{"q"=>"NASDAQ:AAPL"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/trades" for ::1 at 2016-10-26 18:45:49 +0100
+Processing by TradesController#create as HTML
+  Parameters: {"trade"=>{"trade_type"=>"buy", "epic"=>"AAPL", "price"=>"114.91", "exchange"=>"NASDAQ", "number_of_shares"=>4, "book_value"=>459.64}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "trades" ("epic", "number_of_shares", "price", "book_value", "created_at", "updated_at", "user_id", "trade_type", "exchange") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["epic", "AAPL"], ["number_of_shares", 4], ["price", 114], ["book_value", 459], ["created_at", 2016-10-26 17:45:49 UTC], ["updated_at", 2016-10-26 17:45:49 UTC], ["user_id", 1], ["trade_type", 1], ["exchange", "NASDAQ"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered TradeSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 201 Created in 6ms (Views: 1.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/users/1" for ::1 at 2016-10-26 18:45:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.6ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.24ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-26 18:45:49 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"NYSE:JPM", "company"=>{"q"=>"NYSE:JPM"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/getdetails" for ::1 at 2016-10-26 18:45:49 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"NASDAQ:AAPL", "company"=>{"q"=>"NASDAQ:AAPL"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 95ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:57 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"j", "company"=>{"input"=>"j"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:58 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"jp", "company"=>{"input"=>"jp"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:58 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"jpm", "company"=>{"input"=>"jpm"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 619ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 872ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 1189ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:59 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"jpmo", "company"=>{"input"=>"jpmo"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:59 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"jpmor", "company"=>{"input"=>"jpmor"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:59 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"jpmorg", "company"=>{"input"=>"jpmorg"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:45:59 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"jpmorga", "company"=>{"input"=>"jpmorga"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/company" for ::1 at 2016-10-26 18:46:00 +0100
+Processing by CompaniesController#searchname as HTML
+  Parameters: {"input"=>"jpmorgan", "company"=>{"input"=>"jpmorgan"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 419ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 549ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 378ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 383ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 388ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-26 18:46:06 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"NYSE:JPM", "company"=>{"q"=>"NYSE:JPM"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/trades" for ::1 at 2016-10-26 18:46:13 +0100
+Processing by TradesController#create as HTML
+  Parameters: {"trade"=>{"trade_type"=>"buy", "epic"=>"JPM", "price"=>"69.11", "exchange"=>"NYSE", "number_of_shares"=>6, "book_value"=>414.65999999999997}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "trades" ("epic", "number_of_shares", "price", "book_value", "created_at", "updated_at", "user_id", "trade_type", "exchange") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["epic", "JPM"], ["number_of_shares", 6], ["price", 69], ["book_value", 414], ["created_at", 2016-10-26 17:46:13 UTC], ["updated_at", 2016-10-26 17:46:13 UTC], ["user_id", 1], ["trade_type", 1], ["exchange", "NYSE"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered TradeSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/users/1" for ::1 at 2016-10-26 18:46:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mTrade Load (0.3ms)[0m  [1m[34mSELECT "trades".* FROM "trades" WHERE "trades"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.19ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/getdetails" for ::1 at 2016-10-26 18:46:13 +0100
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"NYSE:JPM", "company"=>{"q"=>"NYSE:JPM"}}
+Started POST "/api/getdetails" for ::1 at 2016-10-26 18:46:13 +0100
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started POST "/api/getdetails" for ::1 at 2016-10-26 18:46:13 +0100
+Processing by CompaniesController#getdetails as HTML
+Processing by CompaniesController#getdetails as HTML
+  Parameters: {"q"=>"NASDAQ:AAPL", "company"=>{"q"=>"NASDAQ:AAPL"}}
+  Parameters: {"q"=>"NYSE:JPM", "company"=>{"q"=>"NYSE:JPM"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 60ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 105ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
