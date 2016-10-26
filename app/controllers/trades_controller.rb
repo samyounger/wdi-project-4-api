@@ -15,7 +15,7 @@ class TradesController < ApplicationController
 
   # POST /trades
   def create
-    @trade = Trade.new(trade_params)
+    @trade = @current_user.trades.new(trade_params)
 
     if @trade.save
       render json: @trade, status: :created, location: @trade
@@ -46,6 +46,6 @@ class TradesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def trade_params
-      params.require(:trade).permit(:epic, :number_of_shares, :price, :value, :trade_type)
+      params.require(:trade).permit(:epic, :number_of_shares, :price, :value, :trade_type, :exchange)
     end
 end
