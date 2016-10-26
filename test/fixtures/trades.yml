@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  epic: MyString
+  number_of_shares: MyString
+  price: MyString
+  value: MyString
+
+two:
+  epic: MyString
+  number_of_shares: MyString
+  price: MyString
+  value: MyString
