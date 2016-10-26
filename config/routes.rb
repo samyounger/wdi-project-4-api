@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :users
     resources :trades
     post 'trades', to: 'trades#create'
+    put  'trades/:id', to: 'trades#update'
     post 'register', to: 'authentications#register'
     post 'login', to: 'authentications#login'
     post 'company', to: 'companies#searchname'

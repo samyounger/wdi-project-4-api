@@ -5,7 +5,10 @@ class TradesController < ApplicationController
   def index
     @trades = Trade.all
 
+    @trades.to_a.sum { |t| t.book_value(parameter) }
+
     render json: @trades
+
   end
 
   # GET /trades/1
@@ -27,6 +30,7 @@ class TradesController < ApplicationController
   # PATCH/PUT /trades/1
   def update
     if @trade.update(trade_params)
+    puts trade_params
       render json: @trade
     else
       render json: @trade.errors, status: :unprocessable_entity
@@ -46,6 +50,6 @@ class TradesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def trade_params
-      params.require(:trade).permit(:epic, :number_of_shares, :price, :book_value, :trade_type, :exchange)
+      params.require(:trade).permit(:epic, :number_of_shares, :price, :book_value, :sale_value, :trade_type, :exchange)
     end
 end

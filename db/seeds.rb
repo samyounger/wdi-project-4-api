@@ -16,6 +16,6 @@ u4 = User.create!(username: "kenny", first_name: "Kenny", last_name: "McCormick"
 
 t1 = u1.trades.create!(epic: "JPM", exchange: "NYSE", number_of_shares: "100", price: "56", book_value: "5600", trade_type: "buy")
 t2 = u2.trades.create!(epic: "MSFC", exchange: "NASDAQ", number_of_shares: "50", price: "84", book_value: "4200", trade_type: "buy")
-t3 = u3.trades.create!(epic: "INTC", exchange: "NASDAQ", number_of_shares: "2000", price: "34", book_value: "68000", trade_type: "sell")
+t3 = u3.trades.create!(epic: "INTC", exchange: "NASDAQ", number_of_shares: "2000", price: "34", book_value: "68000", sale_value: "70000", trade_type: "sell")
 t4 = u3.trades.create!(epic: "C", exchange: "NYSE", number_of_shares: "150", price: "89", book_value: "13350", trade_type: "buy")
-t5 = u4.trades.create!(epic: "GOOG", exchange: "NASDAQ", number_of_shares: "150000", price: "87", book_value: "13050000", trade_type: "sell")
+t5 = u4.trades.create!(epic: "GOOG", exchange: "NASDAQ", number_of_shares: "150000", price: "87", book_value: "13050000", sale_value: "15000000", trade_type: "sell")
