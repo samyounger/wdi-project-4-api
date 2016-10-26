@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026174845) do
+ActiveRecord::Schema.define(version: 20161026200215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20161026174845) do
     t.integer  "trade_type"
     t.string   "exchange"
     t.integer  "sale_value"
+    t.string   "comments"
     t.index ["trade_type"], name: "index_trades_on_trade_type", using: :btree
     t.index ["user_id"], name: "index_trades_on_user_id", using: :btree
   end
