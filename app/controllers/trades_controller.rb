@@ -5,7 +5,7 @@ class TradesController < ApplicationController
   def index
     @trades = Trade.all
 
-    @trades.to_a.sum { |t| t.book_value(parameter) }
+    # @trades.to_a.sum { |t| t.book_value(parameter) }
 
     render json: @trades
 
