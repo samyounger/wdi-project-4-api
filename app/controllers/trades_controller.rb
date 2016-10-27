@@ -7,6 +7,10 @@ class TradesController < ApplicationController
 
     # @trades.to_a.sum { |t| t.book_value(parameter) }
 
+    # brands = Book.joins(:brand).select("brands.id as id, brands.name as brand_name,count(*) as count").group(:brand_id)
+    #
+    # @brands = brands.collect{|o| ["#{o.brand_name}(#{o.count})",o.id]}
+
     render json: @trades
 
   end
