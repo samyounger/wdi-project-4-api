@@ -28,6 +28,8 @@ module BackEnd
     config.api_only = true
     config.autoload_paths << Rails.root.join('lib')
 
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
+
     # config.autoload_paths += %W(#{config.root}/lib)
 
     config.middleware.insert_before 0, Rack::Cors do
